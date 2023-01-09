@@ -1,7 +1,7 @@
 ﻿using System;
 using tabuleiro;
 
-namespace xadrez
+namespace Xadrez
 {
     class PosicaoXadrez
     {
