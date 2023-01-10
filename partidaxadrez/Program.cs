@@ -21,7 +21,6 @@ namespace partidaxadrez
 
                         Console.Write("\nOrigem: ");
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
-
                         partida.validarPosicaoDeOrigem(origem);
 
                         bool[,] posicoesPossiveis = partida.tab.peca(origem).movimentosPossiveis();
@@ -39,11 +38,11 @@ namespace partidaxadrez
                     catch (TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
-                        Console.ReadKey();
+                        Console.ReadLine();
                     }
                 }
-
-                Tela.imprimirTabuleiro(partida.tab);
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
             catch (TabuleiroException e)
             {
